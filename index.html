@@ -19,6 +19,9 @@
     .lato {
       font-family: "Lato", sans-serif;
     }
+    html{
+      scroll-behavior: smooth;
+    }
   </style>
 
   <title>Peddy</title>
@@ -32,16 +35,15 @@
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" id="dropdownToggle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Home</a></li>
-              <li><a>Shop</a></li>
-              <li><a>Contact</a></li>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" id="dropdownMenu">
+              <li><a href="#homeSection">Home</a></li>
+              <li><a href="#Bestfriend-container">Shop</a></li>
+              <li><a href="#contacts">Contact</a></li>
             </ul>
           </div>
           <img class="h-[24px] w-[29px]" src="images/logo.webp" alt="logo">
@@ -49,9 +51,9 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1 text-[16px]">
-            <li><a>Home</a></li>
-            <li><a>Shop</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#homeSection">Home</a></li>
+            <li><a href="#Bestfriend-container">Shop</a></li>
+            <li><a href="#contacts">Contact</a></li>
           </ul>
         </div>
         <div class="navbar-end">
@@ -67,7 +69,7 @@
   </header>
   <main class="max-w-screen-xl mx-auto">
     <!-- body section with image starts from here -->
-    <section class="p-1">
+    <section id="homeSection" class="p-1">
       <div class="flex flex-col justify-center items-center lg:mt-5 mt-3">
         <p class="text-xl font-bold text-gray-500 inline-flex items-center">
           Bringing Families Together
@@ -127,7 +129,7 @@
     <!-- best Deal for you section ends from here -->
 
   </main>
-  <footer class="footer bg-black text-base-content lg:p-20 p-7 mt-10 felx lg:flex-row lg:justify-between  flex-col place-content-center">
+  <footer id="contacts" class="footer bg-black text-base-content lg:p-20 p-7 mt-10 felx lg:flex-row lg:justify-between  flex-col place-content-center">
     <nav>
       <div class="flex gap-1">
         <img class="h-[24px] w-[29px]" src="images/logo.webp" alt="logo">
@@ -157,7 +159,7 @@
       <a class="link link-hover text-white">Contacts</a>
     </nav>
 
-    <nav>
+    <nav >
       <div class="flex flex-col gap-y-5">
         <h6 class=" text-[18px] font-bold text-[#ffffff]">Drop a Message</h6>
         <input class="p-2 rounded-xl bg-gray-900 w-[200px] h-[50px]" type="text" placeholder="Enter your email">

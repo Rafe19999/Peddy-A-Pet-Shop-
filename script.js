@@ -113,6 +113,15 @@ function login(){
   window.location.href = "./login-section.html";
 }
 
+const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Add event listener to toggle the dropdown visibility
+  dropdownToggle.addEventListener('click', () => {
+    // Toggle the 'hidden' class to show or hide the dropdown
+    dropdownMenu.classList.toggle('hidden');
+  });
+
 
 // Call the function to fetch and display categories
 petCategories();
